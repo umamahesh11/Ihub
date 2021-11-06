@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "NetworkSG2309" 
+    
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "protocol": {
+            "value": "TCP"
+        },
+        "skuname": {
+            "value": "Standard_LRS"
+        },
+        "ubuntuname": {
+            "value": "ubuntuvm32"
+
+        },
+        "adminusername": {
+            "value": "Sachin2021" 
+        },
+        "adminpassword": {
+            "value": "Sachin@2021"
+        },
+        "ubuntustoragename": {
+            "value": "ubuntuvm32storage123"
+        }
+
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "keyVaultName": {
+      "value": "SMAMILLA-1995-JK"
+    },
+    "objectId": {
+      "value": "04083dc1-d68e-4f58-bda2-f336907a48ff"
+    },
+    "secretName": {
+      "value": "GEN-UNIQUE-SMAMILLA"
+    },
+    "secretValue": {
+      "value": "GEN-UNIQUE-SMAMILLA"
+    }
+  }
+}

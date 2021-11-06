@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appName": {
+            "value": "demofunctionapp007jk" 
+        },
+        "storageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "runtime": {
+            "value": "dotnet"
+        },
+        "location": {
+            "value": "centralus"
+        },
+        "appInsightsLocation": {
+            "value": "centralus"
+        },
+        "storageAccountTemplate": {
+            "value": "https://raw.githubusercontent.com/abhishek5130/armtemplate-demo/main/azurestoragdeploy.json"
+        },
+        "serverFarmTemplate":{
+            "value": "https://raw.githubusercontent.com/abhishek5130/armtemplate-demo/main/azureserverfarmdeploy.json"
+        }
+    }
+}
