@@ -193,7 +193,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobappservicetemplateurl'),'?')]",
+         "uri": "[concat(parameters('blobappservicetemplateurl'))]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
