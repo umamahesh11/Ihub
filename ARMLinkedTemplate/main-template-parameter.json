@@ -1,334 +1,69 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
     "parameters": {
-		 "templatesastoken": {
-      "type": "string",
-      "metadata": {
-        "description": "shared sas token for linked templates."
-      }
-    },
-    "blobeventhubtemplateurl": {
-      "type": "string",
-      "defaultValue": "logs",
-      "metadata": {
-        "description": "event hub linked template url."
-      }
-    },
-	"blobeventhubtemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "logs",
-      "metadata": {
-        "description": "event hub linked template parameters url."
-      }
-    },
-    "blobazurefunctiontemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "azure function app linked template url."
-      }
-    },
-    "blobazurefunctiontemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "azure function app linked template parameters url."
-      }
-    },
-    "blobappservicetemplateurl": {
-      "type": "string",
-      "defaultValue": "appser",
-      "metadata": {
-        "description": "app service linked template url."
-      }
-    },
-    "blobappservicetemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "app service linked template parameters url."
-      }
-    },
-    "blobservicebustemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "service bus linked template url."
-      }
-    },
-    "blobservicebustemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "service bus linked template parameters url."
-      }
-    },
-    "blobstorageaccounttemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "storage account linked template url."
-      }
-    },
-    "blobstorageaccounttemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "storage account linked template parameter url."
-      }
-    },
-    "blobapimanagementtemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "api management linked template url."
-      }
-    },
-    "blobapimanagementtemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "api management linked template parameter url."
-      }
-    },
-    "blobvnettemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "vnet linked template url."
-      }
-    },
- "blobvnettemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "vnet linked template parameter url."
-      }
-    },
-  "bloblogicapptemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "logicapp linked template url."
-      }
-    },
-    "bloblogicapptemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "logicapp linked template parameter url."
-      }
-    },
-    "blobkeyvaulttemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "KeyVault linked template url."
-      }
-    },
-    "blobkeyvaulttemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "KeyVault linked template parameter url."
-      }
-    },
-    "blobdatabasetemplateurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "database linked template url."
-      }
-    },
-    "blobdatabasetemplateparameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "KeyVault linked template parameter url."
-      }
+        
+		 "blobeventhubtemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/eventhubTemplate.json"
+        },
+		 
+		 "blobeventhubtemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/eventhub.parameters.dev.json"
+        },
+        "blobazurefunctiontemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/azure-functionapp-deploy.json"
+        },
+        "blobazurefunctiontemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/azure-functionapp.parameters.json"
+        },
+        "blobappservicetemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/appservicelinkedtemplate.json"
+        },
+        "blobappservicetemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/appservicelinkedtemplate.parameters.json"
+        },
+        "blobservicebustemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/servicebusdeploy.json"
+        },
+        "blobservicebustemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/servicebus.parameters.json"
+        },
+        "blobstorageaccounttemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/storaageaccounttemplate.json"
+        },
+        "blobstorageaccounttemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/storageaccounttemplate.parameter.json"
+        },
+        "blobapimanagementtemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/api-management.template.json"  
+              },
+        "blobapimanagementtemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/api-management.template.parameters.json"
+        },
+        "blobvnettemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/vnet.json"
+        },
+        "blobvnettemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/vnet.parameters.json"
+        } ,
+        "bloblogicapptemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/logicapp.json"
+        },
+        "bloblogicapptemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/logicapp.parameters.json"
+        },
+        "blobkeyvaulttemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/key-Vault-template.json"
+        },
+        "blobkeyvaulttemplateparameterurl":{
+              "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/key-Vault-parameters.json"
+        },
+        "blobdatabasetemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/database-template.json"
+        },
+        "blobdatabasetemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/database-parameters.json"
+        }
     }
- 
- 
-    
-   
-  },
-  
-  "variables": {
-  },
-  "resources": [
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateEventHub",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobeventhubtemplateurl'), '?', parameters('templatesastoken'))]",
-         "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-        "uri": "[concat(parameters('blobeventhubtemplateparameterurl'), '?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateAzureFunction",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobazurefunctiontemplateurl'), '?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobazurefunctiontemplateparameterurl'), '?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateAppService",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobappservicetemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobappservicetemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateAzureServiceBus",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobservicebustemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobservicebustemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplatestorageAccount",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobstorageaccounttemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobstorageaccounttemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateVnet",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobvnettemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobvnettemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateLogicApp",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('bloblogicapptemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('bloblogicapptemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateKeyVault",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobkeyvaulttemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobkeyvaulttemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateDatabase",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobdatabasetemplateurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobdatabasetemplateparameterurl'),'?', parameters('templatesastoken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    }
-
-    // },
-    // {
-    //   "type": "Microsoft.Resources/deployments",
-    //   "apiVersion": "2021-04-01",
-    //   "name": "linkTemplateApiManagement",
-    //   "properties": {
-    //     "mode": "Incremental",
-    //     "templateLink": {
-    //      "uri": "[concat(parameters('blobapimanagementtemplateurl'),'?', parameters('templatesastoken'))]",
-    //     "contentVersion": "1.0.0.0"
-    //   },
-    //   "parametersLink": {
-    //      "uri": "[concat(parameters('blobapimanagementtemplateparameterurl'),'?', parameters('templatesastoken'))]",
-    //     "contentVersion": "1.0.0.0"
-    //   }
-        
-    //   }
-     
-  ],
-  "outputs": {}
 }
+
