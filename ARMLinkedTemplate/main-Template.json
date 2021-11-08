@@ -2,12 +2,6 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
     "parameters": {
-		 "templatesastoken": {
-      "type": "string",
-      "metadata": {
-        "description": "shared sas token for linked templates."
-      }
-    },
     "blobeventhubtemplateurl": {
       "type": "string",
       "defaultValue": "logs",
@@ -164,11 +158,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobeventhubtemplateurl'), '?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobeventhubtemplateurl'),'')]",
          "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-        "uri": "[concat(parameters('blobeventhubtemplateparameterurl'), '?', parameters('templatesastoken'))]",
+        "uri": "[concat(parameters('blobeventhubtemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -181,11 +175,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobazurefunctiontemplateurl'), '?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobazurefunctiontemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobazurefunctiontemplateparameterurl'), '?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobazurefunctiontemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -198,11 +192,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobappservicetemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobappservicetemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobappservicetemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobappservicetemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -215,11 +209,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobservicebustemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobservicebustemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobservicebustemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobservicebustemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -232,11 +226,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobstorageaccounttemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobstorageaccounttemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobstorageaccounttemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobstorageaccounttemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -249,11 +243,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobvnettemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobvnettemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobvnettemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobvnettemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -266,11 +260,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('bloblogicapptemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('bloblogicapptemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('bloblogicapptemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('bloblogicapptemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -283,11 +277,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobkeyvaulttemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobkeyvaulttemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobkeyvaulttemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobkeyvaulttemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
@@ -300,11 +294,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('blobdatabasetemplateurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobdatabasetemplateurl'),'')]",
         "contentVersion": "1.0.0.0"
       },
       "parametersLink": {
-         "uri": "[concat(parameters('blobdatabasetemplateparameterurl'),'?', parameters('templatesastoken'))]",
+         "uri": "[concat(parameters('blobdatabasetemplateparameterurl'),'')]",
         "contentVersion": "1.0.0.0"
       }
         
