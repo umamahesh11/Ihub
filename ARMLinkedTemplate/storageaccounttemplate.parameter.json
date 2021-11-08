@@ -6,7 +6,11 @@
             "value": "eastus"
         },
         "storageAccountName": {
+<<<<<<< HEAD
             "value": "storageaccountjklinked2"
+=======
+            "value": "storageaccountjklinked12"
+>>>>>>> 23886b71c6a9c38e2fc0450b2e1ccc0d2d407756
         },
         "accountType": {
             "value": "Standard_RAGRS"
