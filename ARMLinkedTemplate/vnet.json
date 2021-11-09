@@ -218,7 +218,7 @@
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true,
-                        "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts/', toLower('ubuntuvm32storage123'))).primaryEndpoints.blob]"
+                        "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts/', toLower('ubuntuvm323storage1233'))).primaryEndpoints.blob]"
                     
                     }
                 }
