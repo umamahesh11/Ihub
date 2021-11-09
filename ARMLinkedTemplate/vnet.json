@@ -77,7 +77,7 @@
             "kind": "Storage"
         },
         {
-            "name": "UBUNTUVM32-PublicIP",
+            "name": "UBUNTUVM323-PublicIP",
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2020-11-01",
             "location": "[parameters('location')]",
@@ -87,12 +87,12 @@
             "properties": {
                 "publicIPAllocationMethod": "Dynamic",
                 "dnsSettings": {
-                    "domainNameLabel": "[toLower('UBUNTUVM32')]"
+                    "domainNameLabel": "[toLower('UBUNTUVM323')]"
                 }
             }
         },
         {
-            "name": "UBUNTUVM32-nsg",
+            "name": "UBUNTUVM323-nsg",
             "type": "Microsoft.Network/networkSecurityGroups",
             "apiVersion": "2020-11-01",
             "location": "[parameters('location')]",
@@ -118,14 +118,14 @@
         {
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
-            "name": "UBUNTUVM32-VirtualNetwork",
+            "name": "UBUNTUVM323-VirtualNetwork",
             "location": "[parameters('location')]",
 
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', 'UBUNTUVM32-nsg')]"
+                "[resourceId('Microsoft.Network/networkSecurityGroups', 'UBUNTUVM323-nsg')]"
             ],
             "tags": {
-                "displayName": "UBUNTUVM32-VirtualNetwork"
+                "displayName": "UBUNTUVM323-VirtualNetwork"
             },
             "properties": {
                 "addressSpace": {
@@ -135,11 +135,11 @@
                 },
                 "subnets": [
                     {
-                        "name": "UBUNTUVM32-VirtualNetwork-Subnet",
+                        "name": "UBUNTUVM323-VirtualNetwork-Subnet",
                         "properties": {
                             "addressPrefix": "10.0.0.0/24",
                             "networkSecurityGroup": {
-                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'UBUNTUVM32-nsg')]"
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'UBUNTUVM323-nsg')]"
                             }
                         }
                     }
@@ -147,16 +147,16 @@
             }
         },
         {
-            "name": "UBUNTUVM32-NetworkInterface",
+            "name": "UBUNTUVM323-NetworkInterface",
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2020-11-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/publicIPAddresses', 'UBUNTUVM32-PublicIP')]",
-                "[resourceId('Microsoft.Network/virtualNetworks', 'UBUNTUVM32-VirtualNetwork')]"
+                "[resourceId('Microsoft.Network/publicIPAddresses', 'UBUNTUVM323-PublicIP')]",
+                "[resourceId('Microsoft.Network/virtualNetworks', 'UBUNTUVM323-VirtualNetwork')]"
             ],
             "tags": {
-                "displayName": "UBUNTUVM32-NetworkInterface"
+                "displayName": "UBUNTUVM323-NetworkInterface"
             },
             "properties": {
                 "ipConfigurations": [
@@ -165,10 +165,10 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'UBUNTUVM32-PublicIP')]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'UBUNTUVM323-PublicIP')]"
                             },
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'UBUNTUVM32-VirtualNetwork', 'UBUNTUVM32-VirtualNetwork-Subnet')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'UBUNTUVM323-VirtualNetwork', 'UBUNTUVM323-VirtualNetwork-Subnet')]"
                             }
                         }
                     }
@@ -176,15 +176,15 @@
             }
         },
         {
-            "name": "UBUNTUVM32",
+            "name": "UBUNTUVM323",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2021-03-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', 'UBUNTUVM32-NetworkInterface')]"
+                "[resourceId('Microsoft.Network/networkInterfaces', 'UBUNTUVM323-NetworkInterface')]"
             ],
             "tags": {
-                "displayName": "UBUNTUVM32"
+                "displayName": "UBUNTUVM323"
             },
             "properties": {
                 "hardwareProfile": {
@@ -203,7 +203,7 @@
                         "version": "latest"
                     },
                     "osDisk": {
-                        "name": "UBUNTUVM32-OSDisk",
+                        "name": "UBUNTUVM323-OSDisk",
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
                     }
@@ -211,7 +211,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'UBUNTUVM32-NetworkInterface')]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'UBUNTUVM323-NetworkInterface')]"
                         }
                     ]
                 },
