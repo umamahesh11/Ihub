@@ -1,0 +1,71 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters":
+     {
+
+        
+		 "blobeventhubtemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/eventhubTemplate.json"
+        },
+		 
+		 "blobeventhubtemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/eventhub.parameters.dev.json"
+        },
+        "blobazurefunctiontemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/azure-functionapp-deploy.json"
+        },
+        "blobazurefunctiontemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/azure-functionapp.parameters.json"
+        },
+        "blobappservicetemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/appservicelinkedtemplate.json"
+        },
+        "blobappservicetemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/appservicelinkedtemplate.parameters.json"
+        },
+        "blobservicebustemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/servicebusdeploy.json"
+        },
+        "blobservicebustemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/servicebus.parameters.json"
+        },
+        "blobstorageaccounttemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/storaageaccounttemplate.json"
+        },
+        "blobstorageaccounttemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/storageaccounttemplate.parameter.json"
+        },
+        "blobapimanagementtemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/api-management.template.json"  
+              },
+        "blobapimanagementtemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/api-management.template.parameters.json"
+        },
+        "blobvnettemplateurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/vnet.json"
+        },
+        "blobvnettemplateparameterurl": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/vnet.parameters.json"
+        } ,
+        "bloblogicapptemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/logicapp.json"
+        },
+        "bloblogicapptemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/logicapp.parameters.json"
+        },
+        "blobkeyvaulttemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/key-Vault-template.json"
+        },
+        "blobkeyvaulttemplateparameterurl":{
+              "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/key-Vault-parameters.json"
+        },
+        "blobdatabasetemplateurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/database-template.json"
+        },
+        "blobdatabasetemplateparameterurl":{
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/ARMLinkedTemplate/database-parameters.json"
+        }
+    }
+}
+
