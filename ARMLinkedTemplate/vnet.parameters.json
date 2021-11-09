@@ -16,11 +16,11 @@
             "value": "Standard_LRS"
         },
         "ubuntuname": {
-            "value": "ubuntuvm32"
+            "value": "ubuntuvm323"
 
         },
         "adminusername": {
-            "value": "Sachin2021" 
+            "value": "Sachin2021232" 
         },
         "adminpassword": {
             "reference": {
