@@ -7,7 +7,7 @@
     
         },
         "location": {
-            "value": "Central US"
+            "value": "centralus"
         },
         "protocol": {
             "value": "TCP"
