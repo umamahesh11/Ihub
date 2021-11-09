@@ -15,9 +15,9 @@
       "administratorLoginPassword": {
         "reference": {
           "keyVault": {
-              "id": "/subscriptions/<subscriptionid>/resourceGroups/<Resource Group Name>/providers/Microsoft.KeyVault/vaults/<KeyVault Name>"
+            "id": "/subscriptions/c625351f-04f6-43e0-bf04-9cc19f4c3733/resourceGroups/MyRES5/providers/Microsoft.KeyVault/vaults/Keyvault4pmsecrets"
           },
-          "secretName": "dbAdminPassword"
+          "secretName": "password123"
       }
       }
     }
