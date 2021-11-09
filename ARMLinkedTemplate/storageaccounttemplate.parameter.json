@@ -7,10 +7,8 @@
         },
         "storageAccountName": {
 
-            "value": "storageaccountjklinked"
-
             "value": "storageaccountjklinked12"
-
+            
         },
         "accountType": {
             "value": "Standard_RAGRS"
