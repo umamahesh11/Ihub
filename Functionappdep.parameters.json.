@@ -1,27 +1,6 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "appName": {
-            "value": "" // TODO: Fill in parameter value
-        },
-        "sku": {
-            "value": "S1"
-        },
-        "workerSize": {
-            "value": "0"
-        },
-        "storageAccountType": {
-            "value": "Standard_LRS"
-        },
-        "repoURL": {
-            "value": "https://github.com/AzureBytes/functionshttpecho.git"
-        },
-        "branch": {
-            "value": "master"
-        },
-        "location": {
-            "value": "" // TODO: Fill in parameter value
-        }
-    }
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+  }
 }
