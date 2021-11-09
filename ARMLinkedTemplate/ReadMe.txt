@@ -8,3 +8,9 @@ az deployment group create \
 ##################
 Put 1) template-uri =  url of main template file.
     2) parameters = url of parameter file of main template file 
+
+##################
+KeyVault Secrete Configurations:
+    Update KeyVault parameters in below files:
+    1) database-parameter.json
+    2) vnet.parameters.json    

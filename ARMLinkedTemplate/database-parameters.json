@@ -6,14 +6,19 @@
         "value": "azuredbserver232344de"
       },
       "sqlDBName": {
-        "value": "SampleDBJKs2"
+        "value": "SampleDBJKs"
       },
       
       "administratorLogin": {
-        "value": "Sachin20223"
+        "value": "Sachin2022"
       },
       "administratorLoginPassword": {
-        "value": "Sachin@20212"
+        "reference": {
+          "keyVault": {
+              "id": "/subscriptions/<subscriptionid>/resourceGroups/<Resource Group Name>/providers/Microsoft.KeyVault/vaults/<KeyVault Name>"
+          },
+          "secretName": "dbAdminPassword"
+      }
       }
     }
   }

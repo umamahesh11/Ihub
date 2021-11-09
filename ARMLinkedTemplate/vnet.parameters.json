@@ -16,17 +16,22 @@
             "value": "Standard_LRS"
         },
         "ubuntuname": {
-            "value": "ubuntuvm321234"
+            "value": "ubuntuvm32"
 
         },
         "adminusername": {
             "value": "Sachin2021" 
         },
         "adminpassword": {
-            "value": "Sachin@2021"
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/<subscriptionid>/resourceGroups/<Resource Group Name>/providers/Microsoft.KeyVault/vaults/<KeyVault Name>"
+                },
+                "secretName": "vnetAdminPassword"
+            }
         },
         "ubuntustoragename": {
-            "value": "ubuntuvm32storage123456"
+            "value": "ubuntuvm32storage123"
         }
 
     }
