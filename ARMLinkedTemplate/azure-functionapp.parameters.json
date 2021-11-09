@@ -12,10 +12,10 @@
             "value": "dotnet"
         },
         "location": {
-            "value": "Central US"
+            "value": "centralus"
         },
         "appInsightsLocation": {
-            "value": "Central US"
+            "value": "centralus"
         },
         "storageAccountTemplate": {
             "value": "https://raw.githubusercontent.com/abhishek5130/armtemplate-demo/main/azurestoragdeploy.json"
