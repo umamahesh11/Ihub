@@ -3,14 +3,14 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "serverName": {
-        "value": "azuredbserver232344de"
+        "value": "azuredbserver232344dec"
       },
       "sqlDBName": {
-        "value": "SampleDBJKs"
+        "value": "SampleDBJKss"
       },
       
       "administratorLogin": {
-        "value": "Sachin2022"
+        "value": "Sachin20223"
       },
       "administratorLoginPassword": {
 

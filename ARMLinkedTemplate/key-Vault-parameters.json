@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "keyVaultName": {
-      "value": "SMAMILLA-1995-JK"
+      "value": "SMAMILLA-1995-JK11"
     },
     "objectId": {
       "value": "04083dc1-d68e-4f58-bda2-f336907a48ff"
     },
     "secretName": {
-      "value": "GEN-UNIQUE-SMAMILLA"
+      "value": "GEN-UNIQUE-SMAMILLA11"
     },
     "secretValue": {
-      "value": "GEN-UNIQUE-SMAMILLA"
+      "value": "GEN-UNIQUE-SMAMILLA111"
     }
   }
 }

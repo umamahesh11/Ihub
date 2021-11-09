@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "serviceBusNamespaceName": {
-      "value": "NewBusAshish1"
+      "value": "NewBusAshish13"
     },
     "serviceBusQueueName": {
-      "value": "NewQueueAshish1"
+      "value": "NewQueueAshish13"
     }
   }
 }
