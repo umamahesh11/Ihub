@@ -1,35 +1,27 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-    "parameters": {
+  "parameters": {
     "ihEventHubtemplateurl": {
       "type": "string",
       "metadata": {
         "description": "event hub linked template url."
       }
     },
-	"ihEventHubTemplateParametersurl": {
+    "ihEventHubTemplateParametersurl": {
       "type": "string",
       "defaultValue": "logs",
       "metadata": {
         "description": "event hub linked template parameters url."
       }
-   
-   
+
+
     },
     "ihServiceBusTemplateurl": {
       "type": "string",
       "metadata": {
         "description": "service bus linked template url."
       }
-    },
-    "ihServiceBusTemplateParameterurl": {
-      "type": "string",
-      "defaultValue": "af",
-      "metadata": {
-        "description": "service bus linked template parameters url."
-      }
-   
     },
     "apiManagementTemplateurl": {
       "type": "string",
@@ -43,9 +35,9 @@
       "metadata": {
         "description": "api management linked template parameter url."
       }
-   
+
     },
-  "logicAppTemplateurl": {
+    "logicAppTemplateurl": {
       "type": "string",
       "metadata": {
         "description": "logicapp linked template url."
@@ -56,14 +48,14 @@
       "metadata": {
         "description": "logicapp linked template parameter url."
       }
-    
+
     }
- 
- 
-    
-   
+
+
+
+
   },
-  
+
   "variables": {
   },
   "resources": [
@@ -71,24 +63,24 @@
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
       "name": "linkTemplateEventHub",
-      "properties":{
+      "properties": {
 
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('ihEventHubtemplateurl'))]",
-         "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-        "uri": "[concat(parameters('ihEventHubTemplateParametersurl'),'')]",
-        "contentVersion": "1.0.0.0"
-      }
-        
+          "uri": "[concat(parameters('ihEventHubtemplateurl'))]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "[concat(parameters('ihEventHubTemplateParametersurl'),'')]",
+          "contentVersion": "1.0.0.0"
+        }
+
       }
     },
-   
-    
-    
-   
+
+
+
+
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
@@ -96,18 +88,18 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('ihServiceBusTemplateurl'),'')]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('apiManagementTemplateParameterurl'),'')]",
-        "contentVersion": "1.0.0.0"
+          "uri": "[concat(parameters('ihServiceBusTemplateurl'),'')]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "[concat(parameters('apiManagementTemplateParameterurl'),'')]",
+          "contentVersion": "1.0.0.0"
+        }
+
       }
-        
-      }
-    
+
     },
-    
+
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
@@ -115,37 +107,40 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-         "uri": "[concat(parameters('logicAppTemplateurl'),'')]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('logicApptemplaTeparameterurl'),'')]",
-        "contentVersion": "1.0.0.0"
-      }
-        
+          "uri": "[concat(parameters('logicAppTemplateurl'),'')]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "[concat(parameters('logicApptemplaTeparameterurl'),'')]",
+          "contentVersion": "1.0.0.0"
+        }
+
       }
     },
-   
-    
-     {
-     "type": "Microsoft.Resources/deployments",
-     "apiVersion": "2021-04-01",
-     "name": "linkTemplateApiManagement",
-     "properties": {
-      "mode": "Incremental",
-      "templateLink": {
-      "uri": "[concat(parameters('apiManagementTemplateurl'))]",
-      "contentVersion": "1.0.0.0"
-      }
-     },
-     "parametersLink": {
-       
-         "uri": "[concat(parameters('apiManagementTemplateParameterurl'))]",
+
+
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2021-04-01",
+      "name": "linkTemplateApiManagement",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[concat(parameters('apiManagementTemplateurl'))]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+
+        "uri": "[concat(parameters('apiManagementTemplateParameterurl'))]",
         "contentVersion": "1.0.0.0"
-        }
-     
-       }
-     
+      }
+      }
+      
+
+
+    }
+
   ],
   "outputs": {}
+
 }
