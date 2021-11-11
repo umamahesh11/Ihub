@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "EventHubTemp": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/eventhubTemplate.json" 
+        },
+        "EventHubparamaeter": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/eventhub.parameters.dev.json" 
+        },
+        "ServiceBusTemp": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/servicebusdeploy.json" 
+        },
+        "ServiceBusParameters": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/servicebus.parameters.json" 
+        },
+        "ApiManagemntTemp": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/api-management.template.json"
+        },
+        "ApiManagemntParameter": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/api-managementnewparameters.json" 
+        },
+        "LogicApp": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/logicapp.json" 
+        },
+        "LogicAppParameters": {
+            "value": "https://raw.githubusercontent.com/umamahesh11/Ihub/master/Integration%20Services/logicapp.parameters.json" 
+        }
+    }
+}
