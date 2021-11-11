@@ -1,0 +1,19 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publisherEmail": {
+
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/c625351f-04f6-43e0-bf04-9cc19f4c3733/resourceGroups/MyRES5/providers/Microsoft.KeyVault/vaults/Keyvault4pmsecrets"
+                },
+                "secretName": "adminapi"
+            }
+        },
+        "publisherName": {
+
+            "value": "ih-apis"
+        }
+    }
+}

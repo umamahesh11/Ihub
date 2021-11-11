@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "serviceBusNamespaceName": {
-      "value": "NewBusAshish13"
+      "value": "fn-dealcloud-servicebus"
     },
     "serviceBusQueueName": {
-      "value": "NewQueueAshish13"
+      "value": "fn-dealcloud-queue"
     }
   }
 }
