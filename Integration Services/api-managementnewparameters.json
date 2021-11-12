@@ -8,7 +8,7 @@
                 "keyVault": {
                     "id":  "/subscriptions/07339058-8536-4dae-8233-24abb3001046/resourceGroups/ARM_rg/providers/Microsoft.KeyVault/vaults/admin-email"
                 },
-                "secretName": "adminemail"
+                "secretName": "admin-email"
             }
         },
         "dealCloudApiName": {
