@@ -4,6 +4,13 @@
     "parameters": {
       "eventHubname": {
         "value": "ih-evntHub"
+      },
+      "location": {
+          "value": "" 
+      },
+      "eventHubSku": {
+          "value": "Standard"
       }
     }
+    
   }
