@@ -9,16 +9,16 @@
       }
     },
     "parameters": {
-      "serviceBusNamespaceName": {
+      "serviceBusNamespace": {
         "type": "string",
-        "defaultValue": "newAshishServiceBus",
+        "defaultValue": "fn-dealcloud-servicebus",
         "metadata": {
           "description": "Name of the Service Bus namespace"
         }
       },
-      "serviceBusQueueName": {
+      "dealCloudQueueName": {
         "type": "string",
-        "defaultValue": "newServiceQueue",
+        "defaultValue": "fn-dealcloud-queue",
         "metadata": {
           "description": "Name of the Queue"
         }
@@ -36,7 +36,7 @@
       {
         "type": "Microsoft.ServiceBus/namespaces",
         "apiVersion": "2017-04-01",
-        "name": "[parameters('serviceBusNamespaceName')]",
+        "name": "[parameters('serviceBusNamespace')]",
         "location": "[parameters('location')]",
         "sku": {
           "name": "Standard"
@@ -46,7 +46,7 @@
       {
         "type": "Microsoft.ServiceBus/namespaces/queues",
         "apiVersion": "2017-04-01",
-        "name": "[format('{0}/{1}', parameters('serviceBusNamespaceName'), parameters('serviceBusQueueName'))]",
+        "name": "[format('{0}/{1}', parameters('serviceBusNamespace'), parameters('dealCloudQueueName'))]",
         "properties": {
           "lockDuration": "PT5M",
           "maxSizeInMegabytes": 1024,
@@ -61,7 +61,7 @@
           "enableExpress": false
         },
         "dependsOn": [
-          "[resourceId('Microsoft.ServiceBus/namespaces', parameters('serviceBusNamespaceName'))]"
+          "[resourceId('Microsoft.ServiceBus/namespaces', parameters('serviceBusNamespace'))]"
         ]
       }
     ]
