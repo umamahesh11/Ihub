@@ -2,10 +2,11 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+
         "EventHubTemp": {
             "type": "string",
             "metadata": {
-                "description": "description"
+                "description": "EventHub Template"
             }
         },
         "EventHubparamaeter": {
@@ -55,33 +56,7 @@
     "variables": {},
     "resources": [
         {
-            "name": "eventHublinkedDeployment",
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2021-04-01",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[concat(parameters('ApiManagemntTemp'))]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parameters": {}
-            }
-        },
-        {
-            "name": "EventHub Parameter linkedDeployment",
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2021-04-01",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[concat(parameters('ApiManagemntParameter'))]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parameters": {}
-            }
-        },
-        {
-            "name": "linkedDeployment1",
+            "name": "EventHublinkedDeployment1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2021-04-01",
             "properties": {
@@ -90,24 +65,14 @@
                     "uri": "[concat(parameters('EventHubTemp'))]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parameters": {}
+                "parameterslink": {
+                    "uri": "[concat(parameters('EventHubparamaeter'))]"
+
+                }
             }
         },
         {
-            "name": "linkedDeployment1",
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2021-04-01",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[concat(parameters('EventHubparamaeter'))]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parameters": {}
-            }
-        },
-        {
-            "name": "linkedDeployment1",
+            "name": "serviceBuslinkedDeployment1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2021-04-01",
             "properties": {
@@ -116,24 +81,29 @@
                     "uri": "[concat(parameters('ServiceBusTemp'))]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parameters": {}
+                "parameterslink": {
+
+                   "uri": "[concat(parameters('ServiceBusParameters'))]"
+                }
             }
         },
         {
-            "name": "linkedDeployment1",
+            "name": "ApiManagentDeployment",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2021-04-01",
             "properties": {
                 "mode": "Incremental",
                 "templateLink": {
-                    "uri": "[concat(parameters('ServiceBusParameters'))]",
+                    "uri": "[concat(parameters('ApiManagemntTemp'))]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parameters": {}
+                "parameterslink": {
+                    "uri": "[concat(parameters('ApiManagemntParameter'))]"
+
+                }
             }
-        },
-        {
-            "name": "linkedDeployment1",
+        },{
+            "name": "logicappslinkedDeployment1",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2021-04-01",
             "properties": {
@@ -142,22 +112,12 @@
                     "uri": "[concat(parameters('LogicApp'))]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parameters": {}
-            }
-        },
-        {
-            "name": "linkedDeployment1",
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2021-04-01",
-            "properties": {
-                "mode": "Incremental",
-                "templateLink": {
-                    "uri": "[concat(parameters('LogicAppParameters'))]",
-                    "contentVersion": "1.0.0.0"
-                },
-                "parameters": {}
+                "parameterslink": {
+                    "uri": "[concat(parameters('LogicAppParameters'))]"
+                }
             }
         }
+
     ],
     "outputs": {}
 }
